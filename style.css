@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: darkmagenta;
+}
+g[id] {
+  transform-box: fill-box;
+}
+#toy {
+  transform-origin: center center;
+  animation: toy 2s alternate infinite;
+}
+@keyframes toy {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+#body {
+  transform-origin: center center;
+  animation: body 2s alternate infinite;
+}
+@keyframes body {
+  to {
+    transform: translateY(20px) rotate(-10deg);
+  }
+}
+#right-leg {
+  transform-origin: top right;
+  animation: right-leg 2s alternate infinite;
+}
+@keyframes right-leg {
+  to {
+    transform: translateY(20px) rotate(-20deg);
+  }
+}
+#left-leg {
+  transform-origin: top right;
+  animation: left-leg 2s alternate infinite;
+}
+@keyframes left-leg {
+  to {
+    transform: translateY(20px) rotate(20deg);
+  }
+}
+#right-hand {
+  transform-origin: bottom right;
+  animation: right-hand 2s alternate infinite;
+}
+@keyframes right-hand {
+  to {
+    transform: translateY(20px) rotate(-20deg);
+  }
+}
+#left-hand {
+  transform-origin: bottom left;
+  animation: left-hand 2s alternate infinite;
+}
+@keyframes left-hand {
+  to {
+    transform: translateY(20px) rotate(20deg);
+  }
+}
+#head {
+    transform-origin: center center;
+    animation: head 2s alternate infinite;
+  }
+  @keyframes head {
+    to {
+      transform: translateY(20px) rotate(20deg);
+    }
+  }
+  

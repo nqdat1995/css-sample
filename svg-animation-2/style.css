@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+}
+g[id] {
+  transform-box: fill-box;
+}
+#left-hand {
+  transform-origin: bottom left;
+  animation: left-hand 1s linear alternate infinite;
+}
+@keyframes left-hand {
+  from {
+    transform: rotate(10deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+#right-hand {
+  transform-origin: bottom right;
+  animation: right-hand 1s linear alternate infinite;
+}
+@keyframes right-hand {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+#head {
+  transform-origin: center center;
+  animation: head 1s linear alternate infinite;
+}
+@keyframes head {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+#tail {
+  transform-origin: top right;
+  animation: tail 1s linear alternate infinite;
+}
+@keyframes tail {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+path[id^="red-light-bulb"] {
+  animation: red-light-bulb 1s linear alternate infinite;
+}
+@keyframes red-light-bulb {
+  to {
+    fill: #ff8395;
+  }
+}
+path[id^="yellow-light-bulb"] {
+  animation: yellow-light-bulb 1s linear alternate infinite;
+}
+@keyframes yellow-light-bulb {
+  to {
+    fill: #c27b02;
+  }
+}
+#star path{
+  animation: star 1s linear alternate infinite;
+}
+@keyframes star {
+  to {
+    fill: #ffe5b8;
+  }
+}

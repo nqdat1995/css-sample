@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.container {
+  width: 1035px;
+  height: 690px;
+  position: relative;
+  background-color: transparent;
+}
+.container .clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: clip-path 0.5s;
+}
+.container .clip.clip1 {
+  clip-path: polygon(0 0, 22% 0, 48% 100%, 0% 100%);
+  background-image: url("https://images.unsplash.com/photo-1552872673-9b7b99711ebb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8MTkyMCUyMHglMjAxMDgwfGVufDB8fDB8fA%3D%3D&auto=format");
+  background-size: cover;
+}
+.container .clip.clip2 {
+  clip-path: polygon(22% 0, 63% 0, 79% 100%, 48% 100%);
+  background-image: url("https://images.unsplash.com/photo-1606228281437-dc226988dc3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8MTkyMCUyMHglMjAxMDgwfGVufDB8fDB8fA%3D%3D&auto=format");
+  background-size: cover;
+}
+.container .clip.clip3 {
+  clip-path: polygon(63% 0, 100% 0, 100% 100%, 79% 100%);
+  background-image: url("https://images.unsplash.com/photo-1584009577996-0227b2358356?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8MTkyMCUyMHglMjAxMDgwfGVufDB8fDB8fA%3D%3D&auto=format");
+  background-size: cover;
+}
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.clip .content {
+  width: 50%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  display: none;
+}
+.container .clip:hover .content {
+  display: initial;
+}

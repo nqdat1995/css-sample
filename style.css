@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100%;
+}
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+}
+.toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  width: 0px;
+  height: 0px;
+  padding: 20px;
+}
+.toggle::after,
+.toggle:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  z-index: 999;
+  background-color: black;
+}
+.toggle::after {
+  box-shadow: 0 5px 0 0 black, 0 -5px 0 0 black;
+}
+.toggle:checked::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: none;
+}
+.toggle:checked::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.toggle ~ nav {
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+}
+.toggle:checked ~ nav {
+  transform: translateX(0);
+}
